@@ -23,19 +23,6 @@ const LinkItem = ({title, to}) => {
 }
 
 function Navbar(){
-    // const [height, setHeight] = useState(0);
-    // const elementRef = useRef(null);
-  
-    // useEffect(() => {
-    //   setHeight(elementRef.current.clientHeight);
-    // }, []);
-  
-    // const scrollWithOffset = (el) => {
-    //   const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
-    //   const yOffset = -1 * height;
-    //   window.scrollTo({top: yCoordinate + yOffset, behavior: "smooth"});
-    // };
-
     return(
         <AppBar position="sticky">
             <Stack 
