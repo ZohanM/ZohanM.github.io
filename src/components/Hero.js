@@ -64,6 +64,7 @@ function MyParticle({particleColor}){
               random: false,
               speed: 2,
               straight: false,
+              decay: 0.00025,
             },
             number: {
               density: {
