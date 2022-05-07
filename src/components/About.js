@@ -34,7 +34,7 @@ function About(){
                         alt="Zohan Marediya"
                         src="images/zohan_marediya.jpeg"
                         borderRadius={16}
-                        sx={{maxWidth: "inherit"}}
+                        sx={{maxWidth: "30vw"}}
                     />
                 </Grid>
                 <Grid item
