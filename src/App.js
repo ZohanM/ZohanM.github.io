@@ -3,6 +3,7 @@ import './App.css';
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
+import Projects from "./components/Projects";
 
 //External Imports
 
@@ -14,9 +15,7 @@ function App() {
       <Navbar />
       <Hero />
       <About />
-      <div className="test-divv">
-        Hello
-      </div>
+      <Projects />
     </div>
   );
 }
