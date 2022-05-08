@@ -54,6 +54,20 @@ function About(){
                         {/* Intentionally Empty */}
                 </Grid>
             </Grid>
+            <Box
+                xs={12}
+                maxWidth={{xs: "90vw", sm: "80vw", md: "65vw", lg: "50vw"}}
+                mx="auto"
+                mb={10}
+            >
+                <Typography variant="h4">
+                    Background
+                </Typography>
+                <br />
+                <Typography variant="h5">
+                    I graduated from the University of Texas at Austin with Honors with a bachelor's degree in Electrical Engineering. My degree focus was on Computer Engineering and especially Computer Architecture and Embedded Systems. Relevant Courses for the software aspect that I took in college: Software Design and Implementation I & II (C/C++ and Java-based), Algorithms, Operating Systems, Concurrent and Distributed Systems, and Data Science Principles. Relevant Courses for embedded systems: Computer Architecture, Embedded Systems Design Lab, Digital Logic Design, Solid State Electronic Devices.                 
+                </Typography>
+            </Box>
         </section>
     );
 }
