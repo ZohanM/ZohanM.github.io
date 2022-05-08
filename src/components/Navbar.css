@@ -1,0 +1,7 @@
+.nav-links{
+    text-decoration: none;
+    color: darkblue
+}
+.nav-links:hover{
+    color: red;
+}

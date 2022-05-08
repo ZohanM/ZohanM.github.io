@@ -7,18 +7,19 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 
 //External Imports
-
-
+import {HashRouter as Router} from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <Hero />
-      <About />
-      <Projects />
-      <Contact />
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar />
+        <Hero />
+        <About />
+        <Projects />
+        <Contact />
+      </div>
+    </Router>
   );
 }
 

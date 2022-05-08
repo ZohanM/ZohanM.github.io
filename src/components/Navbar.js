@@ -3,7 +3,6 @@ import "./Navbar.css";
 
 //External Imports
 import {HashLink as Link} from "react-router-hash-link";
-import {HashRouter as Router} from "react-router-dom";
 
 import Typography from '@mui/material/Typography';
 import AppBar from '@mui/material/AppBar';
@@ -11,20 +10,32 @@ import Stack from '@mui/material/Stack';
 import Divider from "@mui/material/Divider";
 
 import {useState, useEffect, useRef} from "react";
-
-const LinkItem = ({title, to}) => {
+const LinkItem = ({title, to, scroll}) => {
     return (
-        <Typography variant={"h5"}>
-            {/* <Link to={to}> */}
+        <Typography variant={"h5"} style={{color: "black"}}>
+            <Link to={to} scroll={el => scroll(el)} className="nav-links">
                 {title}
-            {/* </Link> */}
+            </Link>
         </Typography>
     );
 }
 
 function Navbar(){
+    const [height, setHeight] = useState(0);
+    const elementRef = useRef(null);
+  
+    useEffect(() => {
+      setHeight(elementRef.current.clientHeight);
+    }, []);
+
+    const scrollWithOffset = (el) => {
+        const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+        const yOffset = -1 * height;
+        window.scrollTo({top: yCoordinate + yOffset, behavior: 'smooth'});
+    }
+
     return(
-        <AppBar position="sticky">
+        <AppBar position="sticky" ref={elementRef}>
             <Stack 
                 direction="row"
                 divider={<Divider orientation="vertical" flexItem />}
@@ -34,9 +45,9 @@ function Navbar(){
                 my={2}
                 mx={0}
             >
-                <LinkItem title={"About"} to={""} />
-                <LinkItem title={"Projects"} to={""} />
-                <LinkItem title={"Contact"} to={""} />
+                <LinkItem title={"About"} to={"/#about"} scroll={scrollWithOffset}/>
+                <LinkItem title={"Projects"} to={"/#projects"} scroll={scrollWithOffset}/>
+                <LinkItem title={"Contact"} to={"/#contact"} scroll={scrollWithOffset}/>
             </Stack>
         </AppBar>
     );
