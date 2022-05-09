@@ -10,7 +10,7 @@ function Footer(){
                     Go to top
                 </Typography>
             </Link>
-            <Typography variant="subtitle2" color={"white"} sx={{mt: "15vh"}}>
+            <Typography variant="subtitle2" color={"white"} sx={{mt: "14vh"}}>
                 Designed and developed by Zohan Marediya
             </Typography>
         </Box>

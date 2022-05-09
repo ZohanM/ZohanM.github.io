@@ -12,11 +12,11 @@ import Divider from "@mui/material/Divider";
 import {useState, useEffect, useRef} from "react";
 const LinkItem = ({title, to, scroll}) => {
     return (
-        <Typography variant={"h5"} sx={{color: "primary.main"}}>
-            <Link to={to} scroll={el => scroll(el)} className="nav-links">
+        <Link to={to} scroll={el => scroll(el)} className="nav-links">
+            <Typography variant={"h5"} sx={{color: "primary.main"}}>
                 {title}
-            </Link>
-        </Typography>
+            </Typography>
+        </Link>
     );
 }
 
