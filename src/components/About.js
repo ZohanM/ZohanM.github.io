@@ -5,8 +5,17 @@ import "./About.css";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import FileDownloadIcon from '@mui/icons-material/FileDownload';
 
 function About(){
+    const downloadResume = () => {
+        const link = document.createElement("a");
+        link.href = "./resume.pdf";
+        link.download = "Zohan_Marediya_Resume.pdf";
+        link.click();
+    };
+
     return(
         <section id={"about"}>
             <Box mt={10}>
@@ -44,8 +53,16 @@ function About(){
                     lg={5}
                     mx={{xs: 5, sm: 10, md: 15, lg: 0}}>
                     <Typography variant={"h4"}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </Typography>
+                    <br />
+                    <Button 
+                        variant={"outlined"} 
+                        size={"large"} 
+                        onClick={downloadResume} 
+                        startIcon={<FileDownloadIcon />}>
+                        Resume
+                    </Button>
                 </Grid>
                 <Grid item
                     xs={0}
