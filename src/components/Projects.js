@@ -9,10 +9,11 @@ import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
 import Divider from "@mui/material/Divider";
 import Link from "@mui/material/Link";
+import Box from "@mui/material/Box";
 
 function ProjectCard({project}){
     return(
-        <Card raised variant={"outlined"}>
+        <Card raised variant={"outlined"} sx={{backgroundColor: "beige"}}>
             <CardHeader 
                 title={project["title"]}
             />
@@ -84,7 +85,7 @@ function Projects(){
     let projectList=[];
     addProjects(projectList);
     return(
-        <section id={"projects"}>
+        <Box id={"projects"}>
             <Typography variant="h3">
                 Projects
             </Typography>
@@ -104,7 +105,7 @@ function Projects(){
                     return <ProjectCard project={project} />
                 })}
             </Stack>
-        </section>
+        </Box>
     );
 }
 

@@ -12,11 +12,11 @@ import Divider from "@mui/material/Divider";
 import {useState, useEffect, useRef} from "react";
 const LinkItem = ({title, to, scroll}) => {
     return (
-        <Typography variant={"h5"} style={{color: "black"}}>
-            <Link to={to} scroll={el => scroll(el)} className="nav-links">
+        <Link to={to} scroll={el => scroll(el)} className="nav-links">
+            <Typography variant={"h5"} sx={{color: "primary.main"}}>
                 {title}
-            </Link>
-        </Typography>
+            </Typography>
+        </Link>
     );
 }
 
@@ -30,12 +30,12 @@ function Navbar(){
 
     const scrollWithOffset = (el) => {
         const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
-        const yOffset = -1 * height;
+        const yOffset = -1 * height - 10;
         window.scrollTo({top: yCoordinate + yOffset, behavior: 'smooth'});
     }
 
     return(
-        <AppBar position="sticky" ref={elementRef}>
+        <AppBar position="sticky" ref={elementRef} sx={{backgroundColor: "secondary.dark"}}>
             <Stack 
                 direction="row"
                 divider={<Divider orientation="vertical" flexItem />}
